@@ -1,7 +1,7 @@
-import { ZeroViewModel } from './ZeroViewModel-0.0.3.js';
-import { PeopleService } from './sw.service.js';
+import { ZeroViewModel } from './ZeroViewModel.js';
+import { ProductService } from './product.service.js';
 
-const ps = new PeopleService();
+const ps = new ProductService();
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Content loaded ...');
