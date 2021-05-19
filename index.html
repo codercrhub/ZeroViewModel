@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vm2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="module" src="app/app.js"></script>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Star Wars Search</h5>
+    </div>
+
+    <div class="container">
+        <div id="searchView">
+            <template>
+                <form>
+                    <input type="text" name="filter" placeholder="Type search here ..." />
+                    <button type="submit" click="search">Search</button>
+                </form>
+            </template>
+        </div>
+
+        <div id="resultsView">
+            <template>
+                <span>${people.length ? `Results: ${people.length}`: 'No results!'}</span>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" repeat="people"><span>${name}</span></li>
+                </ul>
+            </template>
+        </div>
+    </div>
+</body>
+
+</html>
